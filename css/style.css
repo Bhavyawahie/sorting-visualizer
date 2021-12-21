@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Michroma&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    top: 0;
+    margin: 0;
+    width: auto;
+    min-height: 95vh;
+    font-family: 'termina demi', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+header .title {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 56px;
+    font-family: Michroma, monospace;
+}
+
+footer {
+    bottom: 10px !important;
+    margin-top: 70px;
+    text-align: center;
+    position: relative;
+    font-size: 20px;
+}
+
+.link {
+    text-decoration: none;
+    font-weight: bold;
+    color: #FF5252;
+}
+
+#menu, #random, #start {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+
+.title {
+    background-color: #62bde0;
+    text-decoration: none;
+    text-align: center;
+    font-size: large;
+}
+
+.options  > select {
+    background-color: #fff;
+    border: 0;
+    border-radius: 5px;
+    height: 20px;
+    font-size: 14px;
+    margin-left: 10px;
+    padding: 2px 15px;
+    outline: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.center {
+    margin: 0 auto;
+    margin-top: 50px;
+    border: 2px solid rgb(38, 233, 233);
+    width: 1500px;
+    height: 450px;
+    max-width: 600px;
+    max-height: 731px;
+}
+
+#box {
+    height: 450px;
+}
+
+.array {
+    display: flex;
+    align-items: flex-start;
+    min-height: 300px;
+    height: 450px;
+    padding: 1rem;
+    flex-direction: row;
+}
+
+/* Javascript handled styles ---> injected on click of array size */
+
+.cell {
+    display: flex;
+    align-items: flex-start;
+    flex: 0.5;
+    width: 0.000001%;
+    margin: 1px;
+    background-color: #c9c9c9;
+    resize: horizontal;
+    position: relative;
+    transition: all .4s ease-in;
+}
+
+.cell.done {
+    background-color: #5beccc;
+    border-color: #5beccc;
+    color: white;
+    transition: all .4s ease-out;
+}
+
+.cell.visited {
+    border-color: #6184D8;
+    background-color: #6184D8;
+    color: white;
+    transition: .5s;
+}
+
+.cell.current {
+    border-color: #41b8aa;
+    background-color: #50C5B7;
+    color: white;
+    transition: all .4s ease-out;
+}
+
+.cell.min {
+    background-color: #FF1493;
+    border-color: #FF1493;
+    color: white;
+    transition: all .4s ease-out;
+}
+
+
+/* Navbar styles */
+
+.navbar {
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: 16px;
+    min-height: 60px;
+    overflow: hidden;
+    text-align: center;
+    background-color: rgb(240, 239, 239);
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+}
+
+.navbar .options {
+    text-align: center;
+}
+
+.navbar a {
+    outline: none;
+    cursor: pointer;
+    color: #ccd6f6;
+    font-weight: bold;
+    padding: 13px 13px;
+    text-decoration: none;
+}
+
+.navbar #menu {
+    margin-top: 15px;
+    width: 150px;
+    height: 25px;
+    outline: none;
+}
+
+.navbar > a:hover {
+    color: #42aab8;
+}
+
+/* Hamburger menu icon hidden without media-query */
+
+.navbar > .icon {  
+    display: none;
+}
+
+@media screen and (max-width: 900px) {
+    header {
+        padding: 
+    }
+
+    .navbar a, .navbar .options {
+        display: none;
+    }
+    .navbar a.icon {
+        float: left;
+        display: block;
+    }
+    .navbar.responsive {
+        position: relative;
+    }
+    .navbar.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .navbar.responsive a, .navbar.responsive .options {
+        float: none;
+        display: block;
+        text-align: center;
+    }
+}
